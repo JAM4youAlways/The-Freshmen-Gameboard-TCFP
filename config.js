@@ -1,26 +1,16 @@
+// ====== CONFIGURATION FILE ======
+// Connects your front end to your Google Apps Script web app
+
 const CONFIG = {
-  SHEET_JSON_URL: "https://script.google.com/macros/s/AKfycbzDQg7kh_Vl5xvn6LGTDC5WnrkT4XpjLsrbUOSzg-srYNT41fQz45aqdn9Bbz1uQd18sg/exec",
-  SHEET_UPDATE_URL: "https://script.google.com/macros/s/AKfycbzDQg7kh_Vl5xvn6LGTDC5WnrkT4XpjLsrbUOSzg-srYNT41fQz45aqdn9Bbz1uQd18sg/exec",
+  // Use the same URL for both JSON fetch and update (doGet + doPost)
+  SHEET_JSON_URL: "https://script.google.com/macros/s/AKfycbyEwZ1XvshgS25u20Izul1FKy6GaUCj_L52-uTdNCeaDJJYARUeoYomTVvXZD4ReIkzoQ/exec",
+  SHEET_UPDATE_URL: "https://script.google.com/macros/s/AKfycbyEwZ1XvshgS25u20Izul1FKy6GaUCj_L52-uTdNCeaDJJYARUeoYomTVvXZD4ReIkzoQ/exec",
+  
+  // List your missions exactly in the order your sheet columns are structured
   MISSIONS: [
-    "Complete assessments",
-    "Create a Binder or Folder",
-    "Explore: Interests and Careers",
-    "Read and Build Vocabulary 1",
-    "Strengthen your future college application",
-    "Get Involved at School",
-    "Read and Build Vocabulary 2",
-    "Volunteer and Give Back",
-    "Build Your Resume",
-    "Plan for Summer Opportunities",
-    "Passion Project 1: Learn",
-    "Passion Project 2: Brainstorm",
-    "Passion Project 3: Choose",
-    "Stay Informed",
-    "Read and Build Vocabulary 3",
-    "PSAT Prep",
-    "AP Prep",
-    "Organize Study Space",
-    "Create Personal Action Plan",
-    "Add your counselor to contacts"
+    "Mission 1", "Mission 2", "Mission 3", "Mission 4", "Mission 5",
+    "Mission 6", "Mission 7", "Mission 8", "Mission 9", "Mission 10",
+    "Mission 11", "Mission 12", "Mission 13", "Mission 14", "Mission 15",
+    "Mission 16", "Mission 17", "Mission 18", "Mission 19", "Mission 20"
   ]
 };
