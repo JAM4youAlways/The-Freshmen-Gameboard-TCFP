@@ -3,16 +3,19 @@
   display: none;
 }
 
+/* General hidden utility */
 .hidden {
   display: none;
 }
 
+/* ===== BASE STYLES ===== */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #f8f9fa;
   margin: 0;
   padding: 0;
   text-align: center;
+  color: #222;
 }
 
 .centered {
@@ -28,6 +31,8 @@ body {
   padding: 10px;
   font-size: 16px;
   width: 220px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
 button {
@@ -39,12 +44,14 @@ button {
   color: white;
   border-radius: 5px;
   font-size: 16px;
+  transition: background 0.2s ease;
 }
 
 button:hover {
   background-color: #005fa3;
 }
 
+/* ===== GAMEBOARD ===== */
 .board-header {
   display: flex;
   justify-content: space-between;
@@ -62,7 +69,11 @@ button:hover {
 .tile {
   position: relative;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.2s ease;
+}
+
+.tile:hover {
+  transform: scale(1.03);
 }
 
 .tile img {
@@ -83,36 +94,68 @@ button:hover {
   border-radius: 0 0 12px 12px;
 }
 
+/* ===== MODAL (Unlock Code Input Box) ===== */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000; /* ensures it’s above the gameboard */
 }
 
 .modal-content {
-  background: white;
+  background: #ffffff;
   padding: 20px;
   border-radius: 12px;
-  width: 300px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 1001;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.modal-message {
+  color: #d00;
+  font-size: 14px;
+  min-height: 18px;
+  margin: 8px 0;
 }
 
 .modal-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 .btn-primary {
   background-color: #0077cc;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #005fa3;
 }
 
 .btn-secondary {
   background-color: #aaa;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
 }
 
+.btn-secondary:hover {
+  background-color: #888;
+}
