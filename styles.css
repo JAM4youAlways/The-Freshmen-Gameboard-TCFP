@@ -1,3 +1,8 @@
+/* Hide modal by default before JavaScript loads */
+#modal {
+  display: none;
+}
+
 .hidden {
   display: none;
 }
