@@ -3,8 +3,8 @@
 
 const CONFIG = {
   // Use the same URL for both JSON fetch (doGet) and update (doPost)
-  SHEET_JSON_URL: "https://script.google.com/macros/s/AKfycbyx8fcaj9ciYBxrrH6U3V_3ggBdsey78pzQRSdN1uir2rqyxfig0Rv2243QZeBotquWag/exec",
-  SHEET_UPDATE_URL: "https://script.google.com/macros/s/AKfycbyx8fcaj9ciYBxrrH6U3V_3ggBdsey78pzQRSdN1uir2rqyxfig0Rv2243QZeBotquWag/exec",
+  SHEET_JSON_URL: "https://script.google.com/macros/s/AKfycbwHBOSIKaGgXarjHlQhe8VAvFSWVD0Mp0GlgWsaxrHtjoYYhrBvUUpVNYOaqC_bsY31_Q/exec",
+  SHEET_UPDATE_URL: "https://script.google.com/macros/s/AKfycbwHBOSIKaGgXarjHlQhe8VAvFSWVD0Mp0GlgWsaxrHtjoYYhrBvUUpVNYOaqC_bsY31_Q/exec",
 
   // EXACT mission names (must match counselor tab order C→V)
   MISSIONS: [
