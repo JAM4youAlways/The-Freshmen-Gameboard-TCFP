@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Freshmen Gameboard 4.0</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Freshmen Gameboard</h1>
+      <p class="subtitle">Unlock missions in any order using your counselor's codes</p>
+    </div>
+  </header>
+
+  <!-- Login Section -->
+  <section id="login-section" class="container card">
+    <h2>Log in with your code</h2>
+    <div class="row">
+      <input id="loginCode" class="input" type="text" placeholder="Enter your login code" />
+      <button id="loginBtn" class="btn">Log In</button>
+    </div>
+    <p class="hint">Your counselor gave you this code.</p>
+    <p id="loginMsg" class="msg"></p>
+  </section>
+
+  <!-- Board Section -->
+  <section id="board-section" class="container card hidden">
+    <div class="board-header">
+      <div>
+        <h2 id="welcome">Welcome!</h2>
+        <p class="muted" id="tabName"></p>
+      </div>
+      <div class="unlock">
+        <input id="unlockInput" class="input" type="text" placeholder="Enter an unlock code" />
+        <button id="submitCodeBtn" class="btn">Submit</button>
+      </div>
+    </div>
+
+    <p id="unlockMsg" class="msg"></p>
+
+    <div id="tiles" class="tiles-grid"></div>
+
+    <div class="actions">
+      <button id="logoutBtn" class="btn btn-secondary">Log Out</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    © Freshmen Gameboard 4.0
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
