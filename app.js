@@ -131,17 +131,53 @@ submitCodeBtn.addEventListener("click", async () => {
       return;
     }
 
-    // Update Google Sheet to mark as unlocked
-    await fetch(CONFIG.SHEET_UPDATE_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        action: "unlock",
-        tab: currentStudent.tab,
-        rowIndex: currentStudent.rowIndex,
-        missionIndex: matchIndex
-      })
-    });
+   // Update Google Sheet to mark as unlocked (with debug logging)
+try {
+  const payload = {
+    action: "unlock",
+    tab: currentStudent.tab,
+    rowIndex: currentStudent.rowIndex,
+    missionIndex: matchIndex
+  };
+
+  console.log("🔹 Sending unlock request:", payload);
+
+  const response = await fetch(CONFIG.SHEET_UPDATE_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+
+  console.log("🔹 Response status:", response.status);
+
+  const result = await response.text();
+  console.log("🔹 Raw response text:", result);
+
+  // Try parsing JSON if possible
+  let json;
+  try {
+    json = JSON.parse(result);
+  } catch (parseError) {
+    console.error("❌ Failed to parse JSON:", parseError);
+    unlockMsg.textContent = "Server error: Invalid JSON response.";
+    return;
+  }
+
+  if (json.success) {
+    console.log("✅ Unlock successful!");
+    currentStudent.missions[matchIndex] = true;
+    renderTiles();
+    unlockInput.value = "";
+    unlockMsg.textContent = "✅ Mission unlocked!";
+    setTimeout(() => (unlockMsg.textContent = ""), 2000);
+  } else {
+    console.error("❌ Unlock failed:", json);
+    unlockMsg.textContent = "Server error: Unlock failed.";
+  }
+} catch (err) {
+  console.error("❌ Fetch error:", err);
+  unlockMsg.textContent = "Error updating. Please try again.";
+}
 
     currentStudent.missions[matchIndex] = true;
     renderTiles();
