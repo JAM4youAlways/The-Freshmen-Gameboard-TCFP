@@ -3,8 +3,8 @@
 
 const CONFIG = {
   // Use the same URL for both JSON fetch (doGet) and update (doPost)
-  SHEET_JSON_URL: "https://script.google.com/a/macros/thecollegefamilyplan.com/s/AKfycbxpazv5zEV1sYhQLlkwAWn1ycZw-Up2NX1rYyG_ZdT8TjoTbsTWJ3ZjKSynx3Jiq4O8/exec",
-  SHEET_UPDATE_URL: "https://script.google.com/a/macros/thecollegefamilyplan.com/s/AKfycbxpazv5zEV1sYhQLlkwAWn1ycZw-Up2NX1rYyG_ZdT8TjoTbsTWJ3ZjKSynx3Jiq4O8/exec",
+  SHEET_JSON_URL: "https://script.google.com/macros/s/AKfycbxZFfFPpb0huSUffxPj9Wzv_E54Lj8kYHDGWE3MsSUpu6CDIQGFTJFInMU-eRVaDZZBcw/exec",
+  SHEET_UPDATE_URL: "https://script.google.com/macros/s/AKfycbxZFfFPpb0huSUffxPj9Wzv_E54Lj8kYHDGWE3MsSUpu6CDIQGFTJFInMU-eRVaDZZBcw/exec",
 
   // List your missions exactly in the same order they appear in your sheet
   MISSIONS: [
