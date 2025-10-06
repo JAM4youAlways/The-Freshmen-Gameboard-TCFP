@@ -3,8 +3,8 @@
 
 const CONFIG = {
   // Use the same URL for both JSON fetch (doGet) and update (doPost)
-  SHEET_JSON_URL: "https://script.google.com/macros/s/AKfycbyZbNgmeYQfUI_SlwrOEAp85waTtF4WgX4QDduU_UTfFmBoL3X4fpclQ6XaYrGgBrjm/exec",
-  SHEET_UPDATE_URL: "https://script.google.com/macros/s/AKfycbyZbNgmeYQfUI_SlwrOEAp85waTtF4WgX4QDduU_UTfFmBoL3X4fpclQ6XaYrGgBrjm/exec",
+  SHEET_JSON_URL: "https://script.google.com/macros/s/AKfycbwFKsmRmLCt6bb2NH86z_eydVohSaXqAKV174nWQ5mD1rFLKZg1fPO7POZfGODBwUtlDg/exec",
+  SHEET_UPDATE_URL: "https://script.google.com/macros/s/AKfycbwFKsmRmLCt6bb2NH86z_eydVohSaXqAKV174nWQ5mD1rFLKZg1fPO7POZfGODBwUtlDg/exec",
 
   // List your missions exactly in the same order they appear in your sheet
   MISSIONS: [
